@@ -30,16 +30,18 @@ body{
 
 
 &__title{
+    text-align: center;
     display: block;
     margin-top: 16px;
     font-weight: bold;
     font-size: 24px;
+    
 
 }
 &__Links{
     margin-top: 32px;
     width: 100%;
-    
+
     &--item{
         background-color: #d6cec3;
         text-align: center;
@@ -51,4 +53,5 @@ body{
         cursor: pointer;
     }
 }
+
 }
