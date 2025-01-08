@@ -1,10 +1,12 @@
 <div class="container">
-    <h1 class="title">User profile</h1>
+    <h1 class="title">{{title}}</h1>
    <div class="card">
     <app-profile-photo></app-profile-photo> 
     <app-profile-description></app-profile-description>     
         <div class="card__Links">
-    <app-social-link></app-social-link>   
+    <app-social-link [name]="'Github'"></app-social-link>   
+    <app-social-link [name]="'Linkedin'"></app-social-link>  
+    <app-social-link [name]="'Twitter'"></app-social-link>  
         </div>
     </div>
 </div>
