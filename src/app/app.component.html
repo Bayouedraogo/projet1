@@ -4,10 +4,11 @@
     <app-profile-photo></app-profile-photo> 
     <app-profile-description></app-profile-description>     
         <div class="card__Links">
-    <app-social-link [name]="'Github'"></app-social-link>   
-    <app-social-link [name]="'Linkedin'"></app-social-link>  
-    <app-social-link [name]="'Twitter'"></app-social-link>  
+    <app-social-link (selectlink)="displaylink($event)" [name]="'Github'"></app-social-link>   
+    <app-social-link (selectlink)="displaylink($event)" [name]="'Linkedin'"></app-social-link>  
+    <app-social-link (selectlink)="displaylink($event)" [name]="'Twitter'"></app-social-link>  
         </div>
     </div>
+    <p class="screen">{{selectedlink}}</p>
 </div>
 

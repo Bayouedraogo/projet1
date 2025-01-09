@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 
 @Component({
   selector: 'app-social-link',
@@ -10,7 +10,12 @@ export class SocialLinkComponent {
   @Input()
 name ='Empty';
 
+@Output()
+selectlink = new EventEmitter<string>();
+
 getLink(): void {
   console.log(this.name);
+  this.selectlink.emit(this.value +this.name);
 }
+value="selected link" ;
 }
