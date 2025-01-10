@@ -2,13 +2,27 @@
     <h1 class="title">{{title}}</h1>
    <div class="card">
     <app-profile-photo></app-profile-photo> 
-    <app-profile-description></app-profile-description>     
+    <app-profile-description></app-profile-description> 
+
         <div class="card__Links">
-    <app-social-link (selectlink)="displaylink($event)" [name]="'Github'"></app-social-link>   
+            @for (link of linkTab; track $index){
+<app-social-link (selectlink)="displaylink($event)" [Sociallink] = "link"></app-social-link>
+            }
+    <!-- <app-social-link (selectlink)="displaylink($event)" [name]="'Github'"></app-social-link>   
     <app-social-link (selectlink)="displaylink($event)" [name]="'Linkedin'"></app-social-link>  
-    <app-social-link (selectlink)="displaylink($event)" [name]="'Twitter'"></app-social-link>  
+    <app-social-link (selectlink)="displaylink($event)" [name]="'Twitter'"></app-social-link>   -->
         </div>
     </div>
-    <p class="screen">{{selectedlink}}</p>
+    
+
+     @if(selectedlink != 'Empty selection') {
+        <p class="screen">
+            {{selectedlink}}</p> 
+            <button (click)="resetlink()">Reset</button>
+     }
+
+     <!-- <p *ngIf = "selectedlink  != 'Empty selection'" class="screen"></p> -->
+        <!-- {{selectedlink}} -->
+
 </div>
 
