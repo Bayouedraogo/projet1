@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+// import { RouterOutlet } from '@angular/router';
 import { ProfileDescriptionComponent } from './components/profile-description/profile-description.component'; 
 import { ProfilePhotoComponent } from './components/profile-photo/profile-photo.component';
 import { SocialLinkComponent } from './components/social-link/social-link.component';
@@ -8,7 +8,7 @@ import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,ProfileDescriptionComponent,ProfilePhotoComponent,SocialLinkComponent],
+  imports: [ProfileDescriptionComponent,ProfilePhotoComponent,SocialLinkComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
